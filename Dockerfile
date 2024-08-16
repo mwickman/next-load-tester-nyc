@@ -1,5 +1,7 @@
 FROM node:20
 
+RUN apt update && apt install -y apache2-utils
+
 WORKDIR /app
 
 # add `/app/node_modules/.bin` to $PATH
