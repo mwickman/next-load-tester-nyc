@@ -43,5 +43,8 @@ export async function POST(req: Request, res: Response) {
   });
   const finalRes = NextResponse.json({ message: "started requests" });
   // res.headers.set('Access-Control-Allow-Origin', '*');
+  finalRes.headers.set("Access-Control-Allow-Methods", "GET,OPTIONS,PATCH,DELETE,POST,PUT");
+  finalRes.headers.set("Access-Control-Allow-Headers", "Content-Type");
+  finalRes.headers.set("Access-Control-Allow-Origin", "*");
   return finalRes;
 }
